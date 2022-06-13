@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+
+	document.write("<br>");
+}
+
+function mostra(frase){
+
+	document.write(frase);
+	pulaLinha();
+}
+
+function calculaImc(altura, peso){
+
+	return peso / (altura * altura);
+
+}
+
+var nome = prompt("Informe seu nome");
+var alturaInformada = prompt(nome + " Informe sua altura");
+var pesoInformado = prompt(nome + " Informe seu peso");
+
+var imc = calculaImc(alturaInformada, pesoInformado);
+
+
+document.write("<h1> IMC </h1>");
+
+pulaLinha();
+
+document.write(nome + ", o seu IMC calculado é: " + imc);
+pulaLinha();
+
+    if(imc < 18.5) { 
+ 	mostra("Você está abaixo do recomendado");
+      }
+
+ 	if(imc > 18.5 && imc < 24.9) { 
+    mostra("Sua classificação é: Peso Normal.");
+      }
+ 
+    if(imc > 25.0 && imc < 29.9) {
+ 	mostra("Sua classificação é: Sobrepeso.");
+      }
+
+    if(imc > 30.0 && imc < 34.9) {  
+    mostra("Sua classificação é: Obesidade Grau 1.");
+      }
+
+    if(imc > 35.0 && imc < 39.9) {
+	mostra("Sua classificação é: Obesidade Severa.");
+      }
+
+    if(imc >= 40.0) { 
+	mostra("Sua classificação é: Obesidade Mórbida.");
+	  }
+
+
+</script>
